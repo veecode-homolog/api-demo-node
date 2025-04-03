@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: api-demo-node-location
+  description: Location to import all api-demo-node catalog components
+spec:
+  targets:
+    - ./.platform/*.yaml

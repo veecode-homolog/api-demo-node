@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "api-demo-node"
+  description: "teste"
+  annotations:
+    github.com/project-slug: veecode-homolog/api-demo-node
+    backstage.io/techdocs-ref: dir:..
+    backstage.io/kubernetes-id: demo-cluster-ec2
+    github.com/workflows: build.yml
+  links:
+    - title: api-demo-node App
+      url: 'http://54.163.28.55/api-demo-node'
+      
+spec:
+  type: service
+  lifecycle: development
+  owner: "group:default/admin"
+  subcomponentOf: 'cluster:default/demo-cluster-ec2'
+  providesApis:
+    - api-demo-node
